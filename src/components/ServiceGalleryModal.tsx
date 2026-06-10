@@ -21,112 +21,112 @@ const getGalleryImages = (serviceId: number): string[] => {
         '/services_gallery/s1_6.png',
         '/services_gallery/s1_7.png',
         '/services_gallery/s1_8.png',
-        'https://loremflickr.com/600/600/paperbag,packaging?lock=9',
-        'https://loremflickr.com/600/600/paperbag,packaging?lock=10'
+        'https://loremflickr.com/600/600/paperbag,packaging/all?lock=9',
+        'https://loremflickr.com/600/600/paperbag,packaging/all?lock=10'
       ];
     case 2:
       return [
         '/portfolio/sweet_moments.png',
         '/portfolio/fresh_bites.png',
-        'https://loremflickr.com/600/600/sweetbox,confectionerybox?lock=1',
-        'https://loremflickr.com/600/600/sweetbox,confectionerybox?lock=2',
-        'https://loremflickr.com/600/600/sweetbox,confectionerybox?lock=3',
-        'https://loremflickr.com/600/600/sweetbox,confectionerybox?lock=4',
-        'https://loremflickr.com/600/600/sweetbox,confectionerybox?lock=5',
-        'https://loremflickr.com/600/600/sweetbox,confectionerybox?lock=6',
-        'https://loremflickr.com/600/600/sweetbox,confectionerybox?lock=7',
-        'https://loremflickr.com/600/600/sweetbox,confectionerybox?lock=8'
+        'https://loremflickr.com/600/600/box,pastry/all?lock=11',
+        'https://loremflickr.com/600/600/box,pastry/all?lock=12',
+        'https://loremflickr.com/600/600/box,pastry/all?lock=13',
+        'https://loremflickr.com/600/600/box,pastry/all?lock=14',
+        'https://loremflickr.com/600/600/box,pastry/all?lock=15',
+        'https://loremflickr.com/600/600/box,pastry/all?lock=16',
+        'https://loremflickr.com/600/600/box,pastry/all?lock=17',
+        'https://loremflickr.com/600/600/box,pastry/all?lock=18'
       ];
     case 3:
       return [
         '/portfolio/spiceroute.png',
-        'https://loremflickr.com/600/600/takeawaybox,papercup?lock=1',
-        'https://loremflickr.com/600/600/takeawaybox,papercup?lock=2',
-        'https://loremflickr.com/600/600/takeawaybox,papercup?lock=3',
-        'https://loremflickr.com/600/600/takeawaybox,papercup?lock=4',
-        'https://loremflickr.com/600/600/takeawaybox,papercup?lock=5',
-        'https://loremflickr.com/600/600/takeawaybox,papercup?lock=6',
-        'https://loremflickr.com/600/600/takeawaybox,papercup?lock=7',
-        'https://loremflickr.com/600/600/takeawaybox,papercup?lock=8',
-        'https://loremflickr.com/600/600/takeawaybox,papercup?lock=9'
+        'https://loremflickr.com/600/600/cup,packaging/all?lock=21',
+        'https://loremflickr.com/600/600/cup,packaging/all?lock=22',
+        'https://loremflickr.com/600/600/cup,packaging/all?lock=23',
+        'https://loremflickr.com/600/600/cup,packaging/all?lock=24',
+        'https://loremflickr.com/600/600/cup,packaging/all?lock=25',
+        'https://loremflickr.com/600/600/cup,packaging/all?lock=26',
+        'https://loremflickr.com/600/600/cup,packaging/all?lock=27',
+        'https://loremflickr.com/600/600/cup,packaging/all?lock=28',
+        'https://loremflickr.com/600/600/cup,packaging/all?lock=29'
       ];
     case 4:
       return [
         '/portfolio/techvision.png',
-        'https://loremflickr.com/600/600/logodesign,brandidentity?lock=1',
-        'https://loremflickr.com/600/600/logodesign,brandidentity?lock=2',
-        'https://loremflickr.com/600/600/logodesign,brandidentity?lock=3',
-        'https://loremflickr.com/600/600/logodesign,brandidentity?lock=4',
-        'https://loremflickr.com/600/600/logodesign,brandidentity?lock=5',
-        'https://loremflickr.com/600/600/logodesign,brandidentity?lock=6',
-        'https://loremflickr.com/600/600/logodesign,brandidentity?lock=7',
-        'https://loremflickr.com/600/600/logodesign,brandidentity?lock=8',
-        'https://loremflickr.com/600/600/logodesign,brandidentity?lock=9'
+        'https://loremflickr.com/600/600/logo,branding/all?lock=31',
+        'https://loremflickr.com/600/600/logo,branding/all?lock=32',
+        'https://loremflickr.com/600/600/logo,branding/all?lock=33',
+        'https://loremflickr.com/600/600/logo,branding/all?lock=34',
+        'https://loremflickr.com/600/600/logo,branding/all?lock=35',
+        'https://loremflickr.com/600/600/logo,branding/all?lock=36',
+        'https://loremflickr.com/600/600/logo,branding/all?lock=37',
+        'https://loremflickr.com/600/600/logo,branding/all?lock=38',
+        'https://loremflickr.com/600/600/logo,branding/all?lock=39'
       ];
     case 5:
       return [
-        'https://loremflickr.com/600/600/businesscard,stationery?lock=1',
-        'https://loremflickr.com/600/600/businesscard,stationery?lock=2',
-        'https://loremflickr.com/600/600/businesscard,stationery?lock=3',
-        'https://loremflickr.com/600/600/businesscard,stationery?lock=4',
-        'https://loremflickr.com/600/600/businesscard,stationery?lock=5',
-        'https://loremflickr.com/600/600/businesscard,stationery?lock=6',
-        'https://loremflickr.com/600/600/businesscard,stationery?lock=7',
-        'https://loremflickr.com/600/600/businesscard,stationery?lock=8',
-        'https://loremflickr.com/600/600/businesscard,stationery?lock=9',
-        'https://loremflickr.com/600/600/businesscard,stationery?lock=10'
+        'https://loremflickr.com/600/600/card,stationery/all?lock=41',
+        'https://loremflickr.com/600/600/card,stationery/all?lock=42',
+        'https://loremflickr.com/600/600/card,stationery/all?lock=43',
+        'https://loremflickr.com/600/600/card,stationery/all?lock=44',
+        'https://loremflickr.com/600/600/card,stationery/all?lock=45',
+        'https://loremflickr.com/600/600/card,stationery/all?lock=46',
+        'https://loremflickr.com/600/600/card,stationery/all?lock=47',
+        'https://loremflickr.com/600/600/card,stationery/all?lock=48',
+        'https://loremflickr.com/600/600/card,stationery/all?lock=49',
+        'https://loremflickr.com/600/600/card,stationery/all?lock=50'
       ];
     case 6:
       return [
         '/portfolio/sunrise.png',
-        'https://loremflickr.com/600/600/label,sticker?lock=1',
-        'https://loremflickr.com/600/600/label,sticker?lock=2',
-        'https://loremflickr.com/600/600/label,sticker?lock=3',
-        'https://loremflickr.com/600/600/label,sticker?lock=4',
-        'https://loremflickr.com/600/600/label,sticker?lock=5',
-        'https://loremflickr.com/600/600/label,sticker?lock=6',
-        'https://loremflickr.com/600/600/label,sticker?lock=7',
-        'https://loremflickr.com/600/600/label,sticker?lock=8',
-        'https://loremflickr.com/600/600/label,sticker?lock=9'
+        'https://loremflickr.com/600/600/sticker,label/all?lock=51',
+        'https://loremflickr.com/600/600/sticker,label/all?lock=52',
+        'https://loremflickr.com/600/600/sticker,label/all?lock=53',
+        'https://loremflickr.com/600/600/sticker,label/all?lock=54',
+        'https://loremflickr.com/600/600/sticker,label/all?lock=55',
+        'https://loremflickr.com/600/600/sticker,label/all?lock=56',
+        'https://loremflickr.com/600/600/sticker,label/all?lock=57',
+        'https://loremflickr.com/600/600/sticker,label/all?lock=58',
+        'https://loremflickr.com/600/600/sticker,label/all?lock=59'
       ];
     case 7:
       return [
         '/portfolio/quickpay.png',
-        'https://loremflickr.com/600/600/qrstand,qrcode?lock=1',
-        'https://loremflickr.com/600/600/qrstand,qrcode?lock=2',
-        'https://loremflickr.com/600/600/qrstand,qrcode?lock=3',
-        'https://loremflickr.com/600/600/qrstand,qrcode?lock=4',
-        'https://loremflickr.com/600/600/qrstand,qrcode?lock=5',
-        'https://loremflickr.com/600/600/qrstand,qrcode?lock=6',
-        'https://loremflickr.com/600/600/qrstand,qrcode?lock=7',
-        'https://loremflickr.com/600/600/qrstand,qrcode?lock=8',
-        'https://loremflickr.com/600/600/qrstand,qrcode?lock=9'
+        'https://loremflickr.com/600/600/qrcode,stand/all?lock=61',
+        'https://loremflickr.com/600/600/qrcode,stand/all?lock=62',
+        'https://loremflickr.com/600/600/qrcode,stand/all?lock=63',
+        'https://loremflickr.com/600/600/qrcode,stand/all?lock=64',
+        'https://loremflickr.com/600/600/qrcode,stand/all?lock=65',
+        'https://loremflickr.com/600/600/qrcode,stand/all?lock=66',
+        'https://loremflickr.com/600/600/qrcode,stand/all?lock=67',
+        'https://loremflickr.com/600/600/qrcode,stand/all?lock=68',
+        'https://loremflickr.com/600/600/qrcode,stand/all?lock=69'
       ];
     case 8:
       return [
-        'https://loremflickr.com/600/600/menuholder,tabletent?lock=1',
-        'https://loremflickr.com/600/600/menuholder,tabletent?lock=2',
-        'https://loremflickr.com/600/600/menuholder,tabletent?lock=3',
-        'https://loremflickr.com/600/600/menuholder,tabletent?lock=4',
-        'https://loremflickr.com/600/600/menuholder,tabletent?lock=5',
-        'https://loremflickr.com/600/600/menuholder,tabletent?lock=6',
-        'https://loremflickr.com/600/600/menuholder,tabletent?lock=7',
-        'https://loremflickr.com/600/600/menuholder,tabletent?lock=8',
-        'https://loremflickr.com/600/600/menuholder,tabletent?lock=9',
-        'https://loremflickr.com/600/600/menuholder,tabletent?lock=10'
+        'https://loremflickr.com/600/600/menu,holder/all?lock=71',
+        'https://loremflickr.com/600/600/menu,holder/all?lock=72',
+        'https://loremflickr.com/600/600/menu,holder/all?lock=73',
+        'https://loremflickr.com/600/600/menu,holder/all?lock=74',
+        'https://loremflickr.com/600/600/menu,holder/all?lock=75',
+        'https://loremflickr.com/600/600/menu,holder/all?lock=76',
+        'https://loremflickr.com/600/600/menu,holder/all?lock=77',
+        'https://loremflickr.com/600/600/menu,holder/all?lock=78',
+        'https://loremflickr.com/600/600/menu,holder/all?lock=79',
+        'https://loremflickr.com/600/600/menu,holder/all?lock=80'
       ];
     case 9:
       return [
-        'https://loremflickr.com/600/600/flyer,brochure?lock=1',
-        'https://loremflickr.com/600/600/flyer,brochure?lock=2',
-        'https://loremflickr.com/600/600/flyer,brochure?lock=3',
-        'https://loremflickr.com/600/600/flyer,brochure?lock=4',
-        'https://loremflickr.com/600/600/flyer,brochure?lock=5',
-        'https://loremflickr.com/600/600/flyer,brochure?lock=6',
-        'https://loremflickr.com/600/600/flyer,brochure?lock=7',
-        'https://loremflickr.com/600/600/flyer,brochure?lock=8',
-        'https://loremflickr.com/600/600/flyer,brochure?lock=9',
-        'https://loremflickr.com/600/600/flyer,brochure?lock=10'
+        'https://loremflickr.com/600/600/flyer,brochure/all?lock=81',
+        'https://loremflickr.com/600/600/flyer,brochure/all?lock=82',
+        'https://loremflickr.com/600/600/flyer,brochure/all?lock=83',
+        'https://loremflickr.com/600/600/flyer,brochure/all?lock=84',
+        'https://loremflickr.com/600/600/flyer,brochure/all?lock=85',
+        'https://loremflickr.com/600/600/flyer,brochure/all?lock=86',
+        'https://loremflickr.com/600/600/flyer,brochure/all?lock=87',
+        'https://loremflickr.com/600/600/flyer,brochure/all?lock=88',
+        'https://loremflickr.com/600/600/flyer,brochure/all?lock=89',
+        'https://loremflickr.com/600/600/flyer,brochure/all?lock=90'
       ];
     default:
       return [];
