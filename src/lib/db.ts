@@ -14,86 +14,51 @@ export interface Inquiry {
   updated_at: string;
 }
 
-const STORAGE_KEY = 'novamens_inquiries';
-
-// Initialize with some mock data if empty
-const initializeDb = () => {
-  if (!localStorage.getItem(STORAGE_KEY)) {
-    const mockData: Inquiry[] = [
-      {
-        id: '1',
-        name: 'Rajesh Patel',
-        company_name: 'Patel Food Industries',
-        phone: '+91 9876543210',
-        email: 'rajesh@patelfoods.com',
-        requirement: 'Looking for 5000 custom printed corrugated boxes for our new snack line.',
-        budget: '₹50,000 – ₹1,00,000',
-        status: 'new',
-        created_at: new Date(Date.now() - 86400000).toISOString(),
-        updated_at: new Date(Date.now() - 86400000).toISOString(),
-      },
-      {
-        id: '2',
-        name: 'Priya Shah',
-        company_name: 'StyleMart Retail',
-        phone: '+91 8765432109',
-        email: 'priya@stylemart.in',
-        requirement: 'Need premium shopping bags with logo printing.',
-        budget: '₹25,000 – ₹50,000',
-        status: 'contacted',
-        created_at: new Date(Date.now() - 172800000).toISOString(),
-        updated_at: new Date(Date.now() - 86400000).toISOString(),
-      }
-    ];
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(mockData));
-  }
-};
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
 
 export const db = {
   getInquiries: async (): Promise<Inquiry[]> => {
-    initializeDb();
-    // Simulate network delay
-    await new Promise(resolve => setTimeout(resolve, 500));
-    const data = localStorage.getItem(STORAGE_KEY);
-    return data ? JSON.parse(data) : [];
+    try {
+      const response = await fetch(`${API_URL}/inquiries`);
+      if (!response.ok) throw new Error('Failed to fetch inquiries');
+      return await response.json();
+    } catch (error) {
+      console.error(error);
+      return [];
+    }
   },
 
   insertInquiry: async (inquiryData: Omit<Inquiry, 'id' | 'status' | 'created_at' | 'updated_at'>): Promise<Inquiry> => {
-    initializeDb();
-    await new Promise(resolve => setTimeout(resolve, 800));
+    const response = await fetch(`${API_URL}/inquiries`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(inquiryData),
+    });
     
-    const newInquiry: Inquiry = {
-      ...inquiryData,
-      id: crypto.randomUUID(),
-      status: 'new',
-      created_at: new Date().toISOString(),
-      updated_at: new Date().toISOString(),
-    };
-
-    const data = localStorage.getItem(STORAGE_KEY);
-    const inquiries: Inquiry[] = data ? JSON.parse(data) : [];
-    inquiries.unshift(newInquiry); // add to top
+    if (!response.ok) {
+      throw new Error('Failed to submit inquiry');
+    }
     
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(inquiries));
-    return newInquiry;
+    return await response.json();
   },
 
   updateInquiryStatus: async (id: string, status: InquiryStatus): Promise<Inquiry | null> => {
-    await new Promise(resolve => setTimeout(resolve, 300));
-    const data = localStorage.getItem(STORAGE_KEY);
-    if (!data) return null;
-    
-    const inquiries: Inquiry[] = JSON.parse(data);
-    const index = inquiries.findIndex(i => i.id === id);
-    if (index === -1) return null;
-
-    inquiries[index] = {
-      ...inquiries[index],
-      status,
-      updated_at: new Date().toISOString()
-    };
-
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(inquiries));
-    return inquiries[index];
+    try {
+      const response = await fetch(`${API_URL}/inquiries/${id}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ status }),
+      });
+      
+      if (!response.ok) throw new Error('Failed to update inquiry status');
+      return await response.json();
+    } catch (error) {
+      console.error(error);
+      return null;
+    }
   }
 };
