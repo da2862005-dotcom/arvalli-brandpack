@@ -9,12 +9,119 @@ interface ServiceGalleryModalProps {
   serviceCategory: string;
 }
 
+const serviceImages: Record<number, string[]> = {
+  1: [
+    "/images/Paper & Garment Bags/ChatGPT Image Jun 10, 2026, 07_01_56 PM.png",
+    "/images/Paper & Garment Bags/ChatGPT Image Jun 10, 2026, 07_02_25 PM.png",
+    "/images/Paper & Garment Bags/ChatGPT Image Jun 10, 2026, 07_02_29 PM.png",
+    "/images/Paper & Garment Bags/ChatGPT Image Jun 10, 2026, 07_02_33 PM.png",
+    "/images/Paper & Garment Bags/ChatGPT Image Jun 10, 2026, 07_03_16 PM.png",
+    "/images/Paper & Garment Bags/printed-sweet-bag.jpeg",
+    "/images/Paper & Garment Bags/DryFruits-Paper-Bags.webp",
+    "/images/Paper & Garment Bags/Designer-Paper-Bags-thumbs-375X375.jpg",
+    "/images/Paper & Garment Bags/MG_5770-Edited.webp",
+    "/images/Paper & Garment Bags/51mAGjt9mDL._AC_UF1000,1000_QL80_.jpg"
+  ],
+  2: [
+    "/images/Sweet Boxes/51mAGjt9mDL._AC_UF1000,1000_QL80_.jpg",
+    "/images/Sweet Boxes/81+0j5kS2qL._AC_UF350,350_QL80_.jpg",
+    "/images/Sweet Boxes/Designer-Paper-Bags-thumbs-375X375.jpg",
+    "/images/Sweet Boxes/DryFruits-Paper-Bags.webp",
+    "/images/Sweet Boxes/Harvest-Brand-Gift-Bags-with-Clear-Window-Kraft-Paper-for-Candy-Large-Brown-Paper-Bags-Biscuits-Cake-Packaging-Boxes-New-Year-Wedding-Gift-Paper-Bags-Supplier.avif",
+    "/images/Sweet Boxes/MG_5770-Edited.webp",
+    "/images/Sweet Boxes/images (1).jpg",
+    "/images/Sweet Boxes/images (2).jpg",
+    "/images/Sweet Boxes/images (3).jpg",
+    "/images/Sweet Boxes/printed-sweet-bag.jpeg"
+  ],
+  3: [
+    "/images/Food Takeaway & Paper Cups/3-01-1024x583.png",
+    "/images/Food Takeaway & Paper Cups/PaperTo-GoContainer_01.jpg",
+    "/images/Food Takeaway & Paper Cups/sustainable-packaging.webp",
+    "/images/Food Takeaway & Paper Cups/image-5-1024x1024.webp",
+    "/images/Food Takeaway & Paper Cups/Carry_Bag_Canva_.webp",
+    "/images/Food Takeaway & Paper Cups/Customized-Flat-Bottom-Stand-up-Kraft-Printed-Paper-Snack-Food-Packaging-Bag.avif",
+    "/images/Food Takeaway & Paper Cups/Square-Bottom-Bag-Coffee-Design-Bag-Square-Box-Bottom-Color-Food-Grade-Kraft-Paper-Bag.avif",
+    "/images/Food Takeaway & Paper Cups/custom-nuts-packaging-manufacturer-blog-3.webp",
+    "/images/Food Takeaway & Paper Cups/7bfee18e3b5ec6d99bb10659e149b6b6.jpg",
+    "/images/Food Takeaway & Paper Cups/images.jpg"
+  ],
+  4: [
+    "/images/Logo & Identity Design/Impressive-Logo-Design-Banner-image.webp",
+    "/images/Logo & Identity Design/birdland_banner-scaled.jpg",
+    "/images/Logo & Identity Design/1520065082309.jpg",
+    "/images/Logo & Identity Design/eight-diverse-logo-designs-showcasing-brand-identity-and-creative-visual-solutions-vector.jpg",
+    "/images/Logo & Identity Design/HowDoesLogoDesignAffectBrandIdentity_02.webp",
+    "/images/Logo & Identity Design/Custom-Logo-Design.jpg",
+    "/images/Logo & Identity Design/logo-designs-1024x439.jpg",
+    "/images/Logo & Identity Design/GlWOT0N437Rgdw9PK99H.jpg",
+    "/images/Logo & Identity Design/original-5df11a928f55dc6ff0b624d29e82b749.webp",
+    "/images/Logo & Identity Design/gettyimages-2149372731-612x612.jpg"
+  ],
+  5: [
+    "/images/Business Cards & Stationery/ChatGPT Image Jun 10, 2026, 07_04_51 PM.png",
+    "/images/Business Cards & Stationery/design-business-card-letterhead-stationery-items-and-corporate-identity.jpg",
+    "/images/Business Cards & Stationery/A10669-The-art-of-stationery-design-history-trends-and-modern-approaches-Image-5.webp",
+    "/images/Business Cards & Stationery/elegant-professional-business-card-template-mockup-two.webp",
+    "/images/Business Cards & Stationery/professional-business-card-template-with-a-creative-flair-mockup-one.webp",
+    "/images/Business Cards & Stationery/364f95d7be1906b9f8cc69353f0774d5.jpg",
+    "/images/Business Cards & Stationery/Business-stationary-design-by-graphic-design-company-qf3soeczg275aycjlkj7hdfiez5aejc1h8753hvtl0.webp",
+    "/images/Business Cards & Stationery/Visiting-Card_10484711202403.jpg",
+    "/images/Business Cards & Stationery/stationery_shop_visiting_card_design_7_.jpg",
+    "/images/Business Cards & Stationery/square.jpg"
+  ],
+  6: [
+    "/images/Labels & Stickers/Labels-Stickers.jpg",
+    "/images/Labels & Stickers/7101W7LkfTL.jpg",
+    "/images/Labels & Stickers/birdland_banner-scaled.jpg",
+    "/images/Labels & Stickers/Bottle-Label.jpeg",
+    "/images/Labels & Stickers/coca-cola-label-1024x459.png",
+    "/images/Labels & Stickers/sale-price-tags-promotional-supermarket-discoun-stickers-advertising-offer-banner-ribbons-paper-promotion-sales-label-sale-price-150688355.webp",
+    "/images/Labels & Stickers/label-design-soft-drink-bottle-260nw-2690251655.webp",
+    "/images/Labels & Stickers/1520065082309.jpg",
+    "/images/Labels & Stickers/1753268171.webp",
+    "/images/Labels & Stickers/coca-cola-label-1024x459.png"
+  ],
+  7: [
+    "/images/QR Payment Stands/QR_code_standee_02.jpg",
+    "/images/QR Payment Stands/acrylic-qr-code-stand-black-gold.jpg",
+    "/images/QR Payment Stands/paytm-google-pay-scanner-stand-gold.jpg",
+    "/images/QR Payment Stands/personalized-qr-code-standee-tapmo-branding.webp",
+    "/images/QR Payment Stands/81BQD4TMjzL._AC_UF1000,1000_QL80_.jpg",
+    "/images/QR Payment Stands/71ouLitHPlL.jpg",
+    "/images/QR Payment Stands/FrostedQR2.webp",
+    "/images/QR Payment Stands/Blackwhatsappqr2.webp",
+    "/images/QR Payment Stands/Printedq.webp",
+    "/images/QR Payment Stands/ChatGPT_Image_Jan_20_2026_01_14_56_PM.webp"
+  ],
+  8: [
+    "/images/Menu Holders & Table Tents/71-ixf6-PyL.jpg",
+    "/images/Menu Holders & Table Tents/71aEd6BmGFL._AC_UF1000,1000_QL80_.jpg",
+    "/images/Menu Holders & Table Tents/e6c492765f478448548fb830492114c4.jpg",
+    "/images/Menu Holders & Table Tents/acrylic-led-table-tent.webp",
+    "/images/Menu Holders & Table Tents/il_1080xN.5246846896_17rp.webp",
+    "/images/Menu Holders & Table Tents/menu-holders-vs-table-stands-vs-table-tents-differences-pros-best-use-cases-8450057.webp",
+    "/images/Menu Holders & Table Tents/71fiknvI0uL._AC_UF894,1000_QL80_.jpg",
+    "/images/Menu Holders & Table Tents/creative-restaurant-table-tent-stand-menu-design-template_619059-758.avif",
+    "/images/Menu Holders & Table Tents/elegant-table-tent-card-mockup-marketing-promotion_15431-794.avif",
+    "/images/Menu Holders & Table Tents/table-tent-mockups-restaurant-menu-display_460658-831.avif"
+  ],
+  9: [
+    "/images/Marketing Flyers & Brochures/2023-04-13_15-00-06_FP-Calculator-A4-Premium-Flyer Spot.png",
+    "/images/Marketing Flyers & Brochures/trifold-brochure-vs-flyer.jpg",
+    "/images/Marketing Flyers & Brochures/Professional-Trifold-Marketing-Brochure-Example.jpg",
+    "/images/Marketing Flyers & Brochures/Leave-a-lasting-impression.jpg",
+    "/images/Marketing Flyers & Brochures/bar-resturant-flyer.png",
+    "/images/Marketing Flyers & Brochures/Distributing-Your-Flyers-Effectively-1024x683.jpg",
+    "/images/Marketing Flyers & Brochures/360_F_373934650_DF3ErczAPD5OguFfy87l1HX61UT8EO3I.jpg",
+    "/images/Marketing Flyers & Brochures/cd03d6acdbcaa90886bf28cf2e7190d7.jpg",
+    "/images/Marketing Flyers & Brochures/ChatGPT-Image-Apr-24-2026-01_55_44-PM.webp",
+    "/images/Marketing Flyers & Brochures/rack-card-1.webp"
+  ]
+};
+
 const getGalleryImages = (serviceId: number): string[] => {
-  const images: string[] = [];
-  for (let i = 1; i <= 10; i++) {
-    images.push(`/services_gallery/s${serviceId}_${i}.png`);
-  }
-  return images;
+  return serviceImages[serviceId] ?? [];
 };
 
 export function ServiceGalleryModal({
