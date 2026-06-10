@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Box, Palette, Megaphone, ArrowRight, ShoppingBag } from 'lucide-react';
+import { Box, Palette, Megaphone, ArrowRight, ShoppingBag, Eye } from 'lucide-react';
 import { AnimateOnScroll } from '../components/AnimateOnScroll';
+import { ServiceGalleryModal } from '../components/ServiceGalleryModal';
 
 type Category = 'All Services' | 'Packaging Solutions' | 'Branding Solutions' | 'Promotional Products';
 
 export function Services() {
   const [activeCategory, setActiveCategory] = useState<Category>('All Services');
+  const [selectedService, setSelectedService] = useState<any>(null);
 
   const categories: Category[] = ['All Services', 'Packaging Solutions', 'Branding Solutions', 'Promotional Products'];
 
@@ -167,7 +169,7 @@ export function Services() {
 
                     <div className="mt-auto">
                       <div className="h-px w-full bg-slate-100 mb-6" />
-                      <ul className="space-y-3">
+                      <ul className="space-y-3 mb-6">
                         {service.features.map((feature, idx) => (
                           <li key={idx} className="flex items-center text-sm text-slate-700 font-medium">
                             <span className="w-1.5 h-1.5 rounded-full bg-primary-500 mr-2 shrink-0" />
@@ -175,6 +177,13 @@ export function Services() {
                           </li>
                         ))}
                       </ul>
+                      <button
+                        onClick={() => setSelectedService(service)}
+                        className="w-full py-3 px-4 rounded-xl text-sm font-bold text-primary-600 bg-primary-50 hover:bg-primary-100 dark:bg-primary-950/20 dark:hover:bg-primary-950/40 dark:text-primary-400 border border-primary-100 dark:border-primary-900/50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2"
+                      >
+                        <Eye className="w-4 h-4" />
+                        View Designs
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -198,6 +207,17 @@ export function Services() {
           </AnimateOnScroll>
         </div>
       </section>
+
+      {/* Gallery Modal */}
+      {selectedService && (
+        <ServiceGalleryModal
+          isOpen={!!selectedService}
+          onClose={() => setSelectedService(null)}
+          serviceId={selectedService.id}
+          serviceTitle={selectedService.title}
+          serviceCategory={selectedService.category}
+        />
+      )}
     </div>
   );
 }
