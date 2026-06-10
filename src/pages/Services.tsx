@@ -29,7 +29,7 @@ export function Services() {
       title: 'Sweet Boxes',
       desc: 'Beautifully designed and printed sweet boxes perfect for festivals, gifting, and bakeries.',
       icon: Box,
-      img: 'https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=600&h=400&q=80',
+      img: '/portfolio/sweet_moments.png',
       badge: 'Custom',
       features: ['Gloss/Matte lamination', 'Spot UV & Foiling', 'Custom dielines', 'Vibrant colors']
     },
