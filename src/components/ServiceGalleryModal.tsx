@@ -20,7 +20,14 @@ const serviceImages: Record<number, string[]> = {
     "/images/Paper & Garment Bags/DryFruits-Paper-Bags.webp",
     "/images/Paper & Garment Bags/Designer-Paper-Bags-thumbs-375X375.jpg",
     "/images/Paper & Garment Bags/MG_5770-Edited.webp",
-    "/images/Paper & Garment Bags/51mAGjt9mDL._AC_UF1000,1000_QL80_.jpg"
+    "/images/Paper & Garment Bags/51mAGjt9mDL._AC_UF1000,1000_QL80_.jpg",
+    "/images/Paper & Garment Bags/81+0j5kS2qL._AC_UF350,350_QL80_.jpg",
+    "/images/Paper & Garment Bags/Harvest-Brand-Gift-Bags-with-Clear-Window-Kraft-Paper-for-Candy-Large-Brown-Paper-Bags-Biscuits-Cake-Packaging-Boxes-New-Year-Wedding-Gift-Paper-Bags-Supplier.avif",
+    "/images/Paper & Garment Bags/images.jpg",
+    "/images/Paper & Garment Bags/images (1).jpg",
+    "/images/Paper & Garment Bags/images (2).jpg",
+    "/images/Paper & Garment Bags/images (3).jpg",
+    "/images/Paper & Garment Bags/images (4).jpg"
   ],
   2: [
     "/images/Sweet Boxes/51mAGjt9mDL._AC_UF1000,1000_QL80_.jpg",
@@ -205,7 +212,7 @@ export function ServiceGalleryModal({
                 </span>
                 <span className="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-xs font-medium">
                   <ImageIcon className="w-3.5 h-3.5" />
-                  10 Designs
+                  {images.length} Designs
                 </span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-navy-950 dark:text-white">
