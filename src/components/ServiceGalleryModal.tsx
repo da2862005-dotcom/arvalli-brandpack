@@ -26,16 +26,16 @@ const getGalleryImages = (serviceId: number): string[] => {
       ];
     case 2:
       return [
+        '/portfolio/sweet_moments.png',
         'https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=600&h=600&q=80',
-        'https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=600&h=600&q=80',
-        'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&h=600&q=80',
-        'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&h=600&q=80',
+        'https://images.unsplash.com/photo-1534432182989-17aa70d64309?auto=format&fit=crop&w=600&h=600&q=80',
         'https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&h=600&q=80',
         'https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&w=600&h=600&q=80',
-        'https://images.unsplash.com/photo-1534432182989-17aa70d64309?auto=format&fit=crop&w=600&h=600&q=80',
-        'https://images.unsplash.com/photo-1548695607-9c73430ba065?auto=format&fit=crop&w=600&h=600&q=80',
         'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=600&h=600&q=80',
-        'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&h=600&q=80'
+        'https://images.unsplash.com/photo-1548695607-9c73430ba065?auto=format&fit=crop&w=600&h=600&q=80',
+        'https://images.unsplash.com/photo-1618005198143-d528f28c21a4?auto=format&fit=crop&w=600&h=600&q=80',
+        'https://images.unsplash.com/photo-1589363460779-cd717fc244ac?auto=format&fit=crop&w=600&h=600&q=80',
+        'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&h=600&q=80'
       ];
     case 3:
       return [
