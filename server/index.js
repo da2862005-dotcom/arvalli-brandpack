@@ -15,9 +15,30 @@ const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
 });
 
-// Test DB Connection
+// Test DB Connection and Initialize Table
 pool.connect()
-  .then(() => console.log('Connected to PostgreSQL'))
+  .then(async (client) => {
+    console.log('Connected to PostgreSQL');
+    
+    // Automatically create the table if it doesn't exist
+    await client.query(`
+      CREATE TABLE IF NOT EXISTS inquiries (
+        id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+        name VARCHAR(255) NOT NULL,
+        company_name VARCHAR(255) NOT NULL,
+        phone VARCHAR(50) NOT NULL,
+        email VARCHAR(255) NOT NULL,
+        requirement TEXT NOT NULL,
+        budget VARCHAR(100) NOT NULL,
+        status VARCHAR(50) DEFAULT 'new',
+        notes TEXT,
+        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+      );
+    `);
+    console.log('Database table verified/created');
+    client.release();
+  })
   .catch(err => console.error('Database connection error', err.stack));
 
 // Basic health check endpoint
