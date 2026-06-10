@@ -17,7 +17,7 @@ export function Portfolio() {
       title: 'Fresh Bites Bakery',
       desc: 'Custom food boxes and grease-resistant paper bags for a premium artisanal bakery.',
       tags: ['Corrugated', 'Food Safe', 'Offset Print'],
-      img: 'https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg?auto=compress&cs=tinysrgb&w=600'
+      img: '/portfolio/fresh_bites.png'
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ export function Portfolio() {
       title: 'SpiceRoute Restaurant',
       desc: 'Eco-friendly takeaway packaging and branded QR stands for tables.',
       tags: ['Takeaway', 'QR Stands', 'Eco-friendly'],
-      img: 'https://images.pexels.com/photos/6849313/pexels-photo-6849313.jpeg?auto=compress&cs=tinysrgb&w=600'
+      img: '/portfolio/spiceroute.png'
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ export function Portfolio() {
       title: 'StyleKart Fashion',
       desc: 'Luxury rigid gift boxes and premium paper shopping bags with foil stamping.',
       tags: ['Rigid Box', 'Foil Stamping', 'Retail Bags'],
-      img: 'https://images.pexels.com/photos/135620/pexels-photo-135620.jpeg?auto=compress&cs=tinysrgb&w=600'
+      img: '/portfolio/stylekart.png'
     },
     {
       id: 4,
@@ -41,7 +41,7 @@ export function Portfolio() {
       title: 'GreenLeaf Pharmacy',
       desc: 'Secure medicine folding cartons and tamper-evident labels.',
       tags: ['Folding Carton', 'Labels', 'Healthcare'],
-      img: 'https://images.pexels.com/photos/3683053/pexels-photo-3683053.jpeg?auto=compress&cs=tinysrgb&w=600'
+      img: '/portfolio/greenleaf.png'
     },
     {
       id: 5,
@@ -49,7 +49,7 @@ export function Portfolio() {
       title: 'TechVision Startup',
       desc: 'Complete brand identity including logo design, business cards, and letterheads.',
       tags: ['Logo Design', 'Stationery', 'Corporate'],
-      img: 'https://images.pexels.com/photos/4015399/pexels-photo-4015399.jpeg?auto=compress&cs=tinysrgb&w=600'
+      img: '/portfolio/techvision.png'
     },
     {
       id: 6,
@@ -57,7 +57,7 @@ export function Portfolio() {
       title: 'Sunrise FMCG',
       desc: 'High-volume product packaging and moisture-resistant label designs.',
       tags: ['FMCG', 'Labels', 'Bulk Run'],
-      img: 'https://images.pexels.com/photos/4197561/pexels-photo-4197561.jpeg?auto=compress&cs=tinysrgb&w=600'
+      img: '/portfolio/sunrise.png'
     },
     {
       id: 7,
@@ -65,7 +65,7 @@ export function Portfolio() {
       title: 'QuickPay Solutions',
       desc: 'Durable acrylic QR payment stands deployed across 1000+ retail outlets.',
       tags: ['Acrylic Stand', 'UV Print', 'Bulk Distribution'],
-      img: 'https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=600'
+      img: '/portfolio/quickpay.png'
     },
     {
       id: 8,
@@ -73,7 +73,7 @@ export function Portfolio() {
       title: 'MegaMart Hyperstore',
       desc: 'In-store promotional danglers, shelf talkers, and discount banners.',
       tags: ['POSM', 'Retail Displays', 'Large Format'],
-      img: 'https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?auto=compress&cs=tinysrgb&w=600'
+      img: '/portfolio/megamart.png'
     },
     {
       id: 9,
@@ -81,7 +81,7 @@ export function Portfolio() {
       title: 'Sweet Moments Confectionery',
       desc: 'Intricate sweet boxes with spot UV and metallic accents for festive seasons.',
       tags: ['Festive', 'Spot UV', 'Sweets Box'],
-      img: 'https://images.pexels.com/photos/835825/pexels-photo-835825.jpeg?auto=compress&cs=tinysrgb&w=600'
+      img: '/portfolio/sweet_moments.png'
     }
   ];
 
