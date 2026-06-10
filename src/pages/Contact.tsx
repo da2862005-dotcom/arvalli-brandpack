@@ -34,11 +34,7 @@ export function Contact() {
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
     try {
-      // 1. Save to database so you can still track it in the Admin Dashboard
-      await db.insertInquiry(data);
-      setIsSuccess(true);
-      
-      // 2. Format the message for WhatsApp
+      // 1. Format the message for WhatsApp FIRST
       const message = `*New Inquiry from Website*
 
 *Name:* ${data.name}
@@ -50,9 +46,16 @@ export function Contact() {
 *Requirement:* 
 ${data.requirement}`;
 
-      // 3. Open WhatsApp in a new tab
+      // 2. Open WhatsApp immediately so the user doesn't have to wait
       const whatsappUrl = `https://wa.me/917863871861?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
+
+      setIsSuccess(true);
+      
+      // 3. Try to save to database in the background (don't block WhatsApp if it fails)
+      await db.insertInquiry(data).catch(err => {
+        console.error("Database save failed, but WhatsApp was opened", err);
+      });
       
     } catch (error) {
       toast.error('Failed to submit inquiry. Please try again.');
