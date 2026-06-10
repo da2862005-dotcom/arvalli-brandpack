@@ -34,9 +34,26 @@ export function Contact() {
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
     try {
+      // 1. Save to database so you can still track it in the Admin Dashboard
       await db.insertInquiry(data);
       setIsSuccess(true);
-      toast.success('Inquiry submitted successfully!');
+      
+      // 2. Format the message for WhatsApp
+      const message = `*New Inquiry from Website*
+
+*Name:* ${data.name}
+*Company:* ${data.company_name}
+*Phone:* ${data.phone}
+*Email:* ${data.email}
+*Budget:* ${data.budget}
+
+*Requirement:* 
+${data.requirement}`;
+
+      // 3. Open WhatsApp in a new tab
+      const whatsappUrl = `https://wa.me/917863871861?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+      
     } catch (error) {
       toast.error('Failed to submit inquiry. Please try again.');
     } finally {
